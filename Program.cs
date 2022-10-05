@@ -1,37 +1,21 @@
-﻿//EJERCICIO 1
+﻿Alumno federico = new Alumno("Federico Riesgo", 1515151515, "Calle falsa 123", "lalalala@lalala.com", false);
+Console.WriteLine(federico);
+public struct Alumno
+{
+    public Alumno(string nombreCompleto, int telefono, string direccion, string email, Boolean nuevoCliente)
+    {
+        NombreCompleto = nombreCompleto;
+        Telefono = telefono;
+        Direccion = direccion;
+        Email = email;
+        NuevoCliente = nuevoCliente;
+    }
 
-/*Console.WriteLine("Ingrese su Nombre");
-string Nombre = Console.ReadLine();
-Console.WriteLine("Ingrese su Apellido");
-string Apellido = Console.ReadLine();
-Console.WriteLine("Ingrese su Edad");
-string EdadStr = Console.ReadLine();
-int Edad = Int32.Parse(EdadStr);
-Console.WriteLine("Sabe programar?");
-string SabeProgramar = Console.ReadLine();
+    public string NombreCompleto { get; private set; }
+    public int Telefono { get; private set; }
+    public string Direccion { get; private set; }
+    public string Email { get; private set; }
+    public Boolean NuevoCliente { get; private set; }
 
-Console.WriteLine($"Hola {Nombre} {Apellido}. Usted tiene {Edad} años y {SabeProgramar} sabe programar");
-*/
-
-//EJERCICIO 2
-/*
-object Coche;
-int Puertas;
-int Ruedas;
-string Marca;
-Boolean VtvVigente;
-
-object Mesa;
-double peso;
-double largo;
-string material;
-string color;
-*/
-
-//EJERCICIO 3
-/*
-1) (num >= 18);
-2) (==);
-3) (true && true); 
-4) (true || false);
-*/
+    public override string ToString() => $"Nombre: {NombreCompleto}, Teléfono: {Telefono}, Dirección: {Direccion}, Email:{Email}, Es nuevo cliente? {NuevoCliente}";
+}
